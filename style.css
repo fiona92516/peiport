@@ -1,0 +1,97 @@
+
+body {
+  margin: 0;
+  font-family: Georgia, serif;
+  background: url('images/bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  color: #333;
+}
+
+.sidebar {
+  width: 160px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.6);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  position: fixed;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar nav ul li {
+  margin-bottom: 10px;
+}
+
+.sidebar nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.bottom {
+  font-size: 12px;
+}
+
+main {
+  margin-left: 180px;
+  width: calc(100% - 180px);
+  padding: 40px;
+}
+
+.logo {
+  width: 300px;
+  display: block;
+  margin: 0 auto 30px;
+}
+
+.grid {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+}
+
+.hover-container {
+  position: relative;
+  display: inline-block;
+}
+
+.hover-container img {
+  width: 600px;
+  height: 600px;
+  object-fit: cover;
+  filter: grayscale(0%);
+  transition: filter 0.3s ease;
+}
+
+.hover-container:hover img {
+  filter: grayscale(100%) brightness(60%);
+}
+
+.label {
+  position: absolute;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.hover-container:hover .label {
+  opacity: 1;
+}
+
+.icon {
+  width: 20px;
+  vertical-align: middle;
+  margin-right: 6px;
+}
